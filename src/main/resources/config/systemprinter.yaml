@@ -1,0 +1,25 @@
+defaults:
+  chrysler_part: "P9999999999"
+  quantity: "Q000384"
+  supplier_id: "V0034836"
+  serial_full: "3S0000000253"
+  serial_suffix: "253"
+  fca_prefix: "1P00"
+  container_id: "1B144"
+  copies: 1
+  encode_control_chars: false
+
+fca_parts:
+  - "552677750"
+  - "552677760"
+  - "552677770"
+  - "552677810"
+  - "552677820"
+  - "552677830"
+  - "552793140"
+  - "552793150"
+  - "552793160"
+
+printer:
+  use_default: true            # si es true, ignora 'name' y usa la predeterminada del SO
+  name: "Printer Zebra"     # si use_default=false, intenta usar esta (coincidencia por nombre o contiene)

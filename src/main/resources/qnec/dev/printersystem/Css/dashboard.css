@@ -1,0 +1,203 @@
+/* Paleta suave y componentes ligeros */
+.root {
+    -fx-background-color: #f5f7fb;
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+    -fx-text-fill: #2a3140;
+}
+
+/* ================================
+   QNEC HEADER STYLE
+   ================================ */
+.header {
+    -fx-padding: 14 16 14 16;
+    /* Gradiente del header */
+    -fx-background-color: linear-gradient(to right,
+        #0E0C0A 20%,
+        #C8102E 60%,
+        #FFD300 100%
+    );
+    -fx-background-radius: 0 0 12 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12, 0.2, 0, 2);
+}
+
+/* Título del header — EFECTO DORADO (sin animación) */
+.header-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+    -fx-wrap-text: true;
+
+    /* Dorado con highlight central */
+    -fx-text-fill: linear-gradient(
+        to bottom,
+        #fff6b7 0%,
+        #f7d879 35%,
+        #d4af37 70%,
+        #b8860b 100%
+    );
+
+    /* leve brillo para contraste en el header */
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.35), 7, 0.4, 0, 1);
+}
+
+/* Logo dentro del header (opcional; la altura real la define el FXML) */
+.header .image-view {
+    -fx-opacity: 0.95;
+}
+
+/* Botones sobre el header */
+.button.primary {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+}
+.button.primary:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Botones */
+.button.primary {
+    -fx-background-color: #5c7cfa;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+.button.primary:hover { -fx-background-color: #4b6cf4; }
+
+.button.ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255,255,255,0.7);
+    -fx-border-radius: 10;
+}
+
+/* Cards */
+.card {
+    -fx-padding: 18;
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-border-color: #e6e9f2;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 8, 0.18, 0, 2);
+    -fx-alignment: center;
+}
+.card-number {
+    -fx-font-size: 36px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2937;
+}
+.card-subtitle {
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+}
+
+/* Paneles */
+.panel {
+    -fx-padding: 12;
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-border-color: #e6e9f2;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0.15, 0, 2);
+}
+.panel-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #374151;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-color: #eef1f7;
+    -fx-border-radius: 10;
+}
+.table-view .column-header-background {
+    -fx-background-color: #f3f4f6;
+    -fx-background-radius: 10 10 0 0;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-size: 34px;
+}
+.table-row-cell:odd {
+    -fx-background-color: #fafbff;
+}
+
+/* Badges (puedes usarlos en celdas) */
+.badge-critical {
+    -fx-background-color: #ff5757; 
+    -fx-text-shadow: 0 0 3px rgba(0,0,0,1);
+    -fx-text-fill: white;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 24;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-alignment: center;
+}
+
+.badge-warning {
+    -fx-background-color: #E3BD20;
+    -fx-text-fill: white;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 24;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-alignment: center;
+}
+.badge-normal {
+    -fx-background-color: #047A3C;
+    -fx-text-fill: white;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 24;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-alignment: center;
+}
+
+/* Timeline */
+.timeline-scroll {
+    -fx-padding: 0 6 6 0;
+}
+.list-view {
+    -fx-background-color: transparent;
+}
+
+
+.font-columns {
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+}
+
+#colConfianza {
+    -fx-padding: 0 12 0 12;
+}
+
+
+.card-clock {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 12, 0.15, 0, 3);
+    -fx-padding: 18;
+}
+
+
+.clock-time {
+    -fx-font-size: 40px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #111827; /* gray-900 */
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.clock-date {
+    -fx-font-size: 17px;
+    -fx-text-fill: #4b5563; /* gray-600 */
+}
+
+.clock-zone {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6b7280; /* gray-500 */
+}

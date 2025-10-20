@@ -1,0 +1,18 @@
+2025-10-17 21:58:09 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:09 INFO  - Iniciado polling cada 3000 ms a http://forklift.test/api/events
+2025-10-17 21:58:09 INFO  - Conectado OK. data.size=100 (610 ms).
+2025-10-17 21:58:09 INFO  - Qnec Info - Application started successfully.
+2025-10-17 21:58:12 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:12 INFO  - Conectado OK. data.size=100 (178 ms).
+2025-10-17 21:58:15 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:15 INFO  - Conectado OK. data.size=100 (180 ms).
+2025-10-17 21:58:18 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:18 INFO  - Conectado OK. data.size=100 (181 ms).
+2025-10-17 21:58:21 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:21 INFO  - Conectado OK. data.size=100 (176 ms).
+2025-10-17 21:58:24 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:24 INFO  - Conectado OK. data.size=100 (186 ms).
+2025-10-17 21:58:27 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:27 INFO  - Conectado OK. data.size=100 (186 ms).
+2025-10-17 21:58:30 INFO  - Solicitando información al servicio REST: http://forklift.test/api/events
+2025-10-17 21:58:30 INFO  - Conectado OK. data.size=100 (188 ms).

@@ -1,0 +1,1098 @@
+2025-10-16 00:10:16 ERROR - Fallo al consultar /api/events (5030 ms): java.net.http.HttpTimeoutException: request timed out
+2025-10-16 00:10:21 ERROR - Fallo al consultar /api/events (7014 ms): java.net.http.HttpTimeoutException: request timed out
+2025-10-16 00:10:26 ERROR - Fallo al consultar /api/events (9009 ms): java.net.http.HttpTimeoutException: request timed out
+2025-10-16 00:27:35 ERROR - Fallo al consultar /api/events (275 ms): java.lang.RuntimeException: HTTP 500 en 271 ms: {
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forklift.events' doesn't exist (Connection: mysql, SQL: select `id`, `user_id`, `timestamp_str`, `event`, `zone_idx`, `level`, `save`, `filename`, `forklift_name`, `confidence`, `meta`, `created_at` from `events` order by `id` desc limit 100)",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+    "line": 824,
+    "trace": [
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 778,
+            "function": "runQueryCallback",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 397,
+            "function": "run",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3188,
+            "function": "select",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3173,
+            "function": "runSelect",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3763,
+            "function": "Illuminate\\Database\\Query\\{closure}",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3172,
+            "function": "onceWithColumns",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "line": 902,
+            "function": "get",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "line": 884,
+            "function": "getModels",
+            "class": "Illuminate\\Database\\Eloquent\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Services\\EventService.php",
+            "line": 63,
+            "function": "get",
+            "class": "Illuminate\\Database\\Eloquent\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php",
+            "line": 431,
+            "function": "App\\Services\\{closure}",
+            "class": "App\\Services\\EventService",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php",
+            "line": 509,
+            "function": "remember",
+            "class": "Illuminate\\Cache\\Repository",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 363,
+            "function": "__call",
+            "class": "Illuminate\\Cache\\CacheManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Services\\EventService.php",
+            "line": 33,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Http\\Controllers\\Api\\EventController.php",
+            "line": 95,
+            "function": "listLatestWithStats",
+            "class": "App\\Services\\EventService",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 46,
+            "function": "index",
+            "class": "App\\Http\\Controllers\\Api\\EventController",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 265,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 211,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 822,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 50,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 821,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 800,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 764,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 753,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 200,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+            "line": 31,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+            "line": 51,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "line": 109,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+            "line": 61,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\HandleCors",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+            "line": 58,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php",
+            "line": 22,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php",
+            "line": 26,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePathEncoding",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 175,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 144,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php",
+            "line": 1220,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\public\\index.php",
+            "line": 20,
+            "function": "handleRequest",
+            "class": "Illuminate\\Foundation\\Application",
+            "type": "->"
+        }
+    ]
+}
+2025-10-16 08:58:01 ERROR - Fallo al consultar /api/events (1237 ms): java.lang.RuntimeException: HTTP 500 en 1233 ms: {
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forklift.cache' doesn't exist (Connection: mysql, SQL: select * from `cache` where `key` in (laravel-cache-events.index:limit=100))",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+    "line": 824,
+    "trace": [
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 778,
+            "function": "runQueryCallback",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 397,
+            "function": "run",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3188,
+            "function": "select",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3173,
+            "function": "runSelect",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3763,
+            "function": "Illuminate\\Database\\Query\\{closure}",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3172,
+            "function": "onceWithColumns",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\DatabaseStore.php",
+            "line": 130,
+            "function": "get",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\DatabaseStore.php",
+            "line": 105,
+            "function": "many",
+            "class": "Illuminate\\Cache\\DatabaseStore",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php",
+            "line": 119,
+            "function": "get",
+            "class": "Illuminate\\Cache\\DatabaseStore",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php",
+            "line": 422,
+            "function": "get",
+            "class": "Illuminate\\Cache\\Repository",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php",
+            "line": 509,
+            "function": "remember",
+            "class": "Illuminate\\Cache\\Repository",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 363,
+            "function": "__call",
+            "class": "Illuminate\\Cache\\CacheManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Services\\EventService.php",
+            "line": 33,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Http\\Controllers\\Api\\EventController.php",
+            "line": 95,
+            "function": "listLatestWithStats",
+            "class": "App\\Services\\EventService",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 46,
+            "function": "index",
+            "class": "App\\Http\\Controllers\\Api\\EventController",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 265,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 211,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 822,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 50,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 821,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 800,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 764,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 753,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 200,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+            "line": 31,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+            "line": 51,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "line": 109,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+            "line": 61,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\HandleCors",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+            "line": 58,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php",
+            "line": 22,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php",
+            "line": 26,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePathEncoding",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 175,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 144,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php",
+            "line": 1220,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\public\\index.php",
+            "line": 20,
+            "function": "handleRequest",
+            "class": "Illuminate\\Foundation\\Application",
+            "type": "->"
+        }
+    ]
+}
+2025-10-16 09:02:54 ERROR - Fallo al consultar /api/events (217 ms): java.lang.RuntimeException: HTTP 500 en 217 ms: {
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forklift.cache' doesn't exist (Connection: mysql, SQL: select * from `cache` where `key` in (laravel-cache-events.index:limit=100))",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+    "line": 824,
+    "trace": [
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 778,
+            "function": "runQueryCallback",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 397,
+            "function": "run",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3188,
+            "function": "select",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3173,
+            "function": "runSelect",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3763,
+            "function": "Illuminate\\Database\\Query\\{closure}",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3172,
+            "function": "onceWithColumns",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\DatabaseStore.php",
+            "line": 130,
+            "function": "get",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\DatabaseStore.php",
+            "line": 105,
+            "function": "many",
+            "class": "Illuminate\\Cache\\DatabaseStore",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php",
+            "line": 119,
+            "function": "get",
+            "class": "Illuminate\\Cache\\DatabaseStore",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php",
+            "line": 422,
+            "function": "get",
+            "class": "Illuminate\\Cache\\Repository",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php",
+            "line": 509,
+            "function": "remember",
+            "class": "Illuminate\\Cache\\Repository",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 363,
+            "function": "__call",
+            "class": "Illuminate\\Cache\\CacheManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Services\\EventService.php",
+            "line": 33,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\app\\Http\\Controllers\\Api\\EventController.php",
+            "line": 95,
+            "function": "listLatestWithStats",
+            "class": "App\\Services\\EventService",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 46,
+            "function": "index",
+            "class": "App\\Http\\Controllers\\Api\\EventController",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 265,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 211,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 822,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 50,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 821,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 800,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 764,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 753,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 200,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+            "line": 31,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+            "line": 51,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "line": 109,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+            "line": 61,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\HandleCors",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+            "line": 58,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php",
+            "line": 22,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php",
+            "line": 26,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePathEncoding",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 175,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 144,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php",
+            "line": 1220,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\laragon\\www\\forklift\\public\\index.php",
+            "line": 20,
+            "function": "handleRequest",
+            "class": "Illuminate\\Foundation\\Application",
+            "type": "->"
+        }
+    ]
+}

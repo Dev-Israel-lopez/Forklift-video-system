@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+
+        <!-- Appender para Consola con estilos , esta seccion es para el desarrollador mandar cuando se de el código  -->
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout
+                    pattern="%cyan{%d{yyyy-MM-dd HH:mm:ss}} - %green{%msg}%n%throwable"/>
+            <!--  pattern="%cyan{%d{yyyy-MM-dd HH:mm:ss}} %yellow{%-5level} %c{1}:%L - %M - %blue{%logger{36}} - %green{%msg}%n%throwable"/> -->
+        </Console>
+
+        <!-- Appender para Debug
+        <RollingFile name="DebugFile" fileName="logs/debug.json"
+                     filePattern="logs/debug-%d{yyyy-MM-dd}.json">
+            <JsonLayout complete="true" compact="false" properties="true">
+                <KeyValuePair key="timestamp" value="$${date:yyyy-MM-dd HH:mm:ss}"/>
+            </JsonLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+-->
+        <!-- Appender para Info -->
+        <RollingFile name="InfoFile" fileName="logs/info.qnec"
+                     filePattern="logs/info-%d{yyyy-MM-dd}.qnec">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+
+        <!-- Appender para Error -->
+        <RollingFile name="ErrorFile" fileName="logs/error.qnec"
+                     filePattern="logs/error-%d{yyyy-MM-dd}.qnec">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+
+        <!-- Appender para Fatal -->
+        <RollingFile name="FatalFile" fileName="logs/fatal.qnec"
+                     filePattern="logs/fatal-%d{yyyy-MM-dd}.qnec">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger por defecto -->
+        <Root level="INFO">
+            <AppenderRef ref="Console" level="INFO"/>
+            <!-- <AppenderRef ref="DebugFile" level="DEBUG"/> -->
+            <AppenderRef ref="InfoFile" level="INFO"/>
+            <AppenderRef ref="ErrorFile" level="ERROR"/>
+            <AppenderRef ref="FatalFile" level="FATAL"/>
+        </Root>
+        <Logger name="com.foo.Bar" level="INFO">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+    </Loggers>
+</Configuration>
